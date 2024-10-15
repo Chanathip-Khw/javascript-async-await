@@ -32,4 +32,15 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+let onSuccessProfile = (data) => {
+  console.log(data);
+};
+
+let onSuccessOrder = (data) => {
+  console.log(data);
+};
+
+getJohnProfile()
+  .then(onSuccessProfile)
+  .then(getJohnOrders)
+  .then(onSuccessOrder);
